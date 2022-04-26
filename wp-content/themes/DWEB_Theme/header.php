@@ -53,68 +53,67 @@ if (!empty($script_in_body)):
     echo $script_in_body;
 endif; ?>
 
-<header class="head">
-    <div class="promotion">
-        <p>MIỄN PHÍ THIẾT KẾ KIẾN TRÚC VỚI GÓI PLUS</p>
-    </div>
-
-    <div class="head__logo-search">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="<?= site_url(); ?>">
-                        <div class="head__logo">
-                            <img src="<?= $logoHeader; ?>" alt="">
-                            <strong>Kiến Trúc Đăng Dương</strong>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-5">
-                    <?= get_search_form(); ?>
-                </div>
-                <div class="col-md-3">
-                    <div class="head__social">
-                        Tư vấn thiết kế: <strong>0983125657</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+<header class="head position-relative d-flex align-items-center">
+    <div class="square position-absolute head__square--left"><div></div></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="nav">
-                    <?php if (has_nav_menu('header-primary')) {
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'header-primary',
-                                'container_class' => 'header__menu',
-                                'menu_class' => 'header__navigation'
-                            )
-                        );
-                    } ?>
-                    <div class="nav-mobile">
-                        <a class="nav-mobile__button button__nav-menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="head__logo">
+                        <a href="<?= site_url(); ?>">
+                            <img src="<?= $logoHeader; ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
+                    </div>
+                    <div class="head__nav">
                         <?php if (has_nav_menu('header-primary')) {
                             wp_nav_menu(
                                 array(
                                     'theme_location' => 'header-primary',
-                                    'container_class' => 'header__menu--mobile',
-                                    'menu_class' => 'header__navigation--mobile'
+                                    'container_class' => 'header__menu',
+                                    'menu_class' => 'header__navigation'
                                 )
                             );
                         } ?>
                     </div>
+                    <div class="head__search">
+                        <?= get_search_form(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="nav-mobile d-none">
+                    <a class="nav-mobile__button button__nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <?php if (has_nav_menu('header-primary')) {
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'header-primary',
+                                'container_class' => 'header__menu--mobile',
+                                'menu_class' => 'header__navigation--mobile'
+                            )
+                        );
+                    } ?>
                 </div>
             </div>
         </div>
     </div>
+    <div class="square position-absolute head__square--right"><div></div></div>
 </header>
+
+<!-- start loading-->
+<div class="loading">
+    <div class="loading__inner">
+        <div class="loading__list">
+            <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
+        </div>
+    </div>
+</div>
+<!-- end loading-->
 
 
 

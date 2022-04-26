@@ -14,17 +14,14 @@ Version: 1.0.0
 
 /* 1. Theme default css */
 
-$color-text: #111;
-$color-bg: #e5e5e5;
-$color-link: #000;
-$color-link-hover: #111;
+$color-main: #C4A170;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
 }
 ::selection {
-    background: #111;
+    background: #EEC587;
     color: #fff;
 }
 a {
@@ -85,6 +82,134 @@ a:hover {
     100% {filter: blur(4px);}
 }
 
+.square {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background: linear-gradient(to right, #C4A170, #EEC587);
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: #FFF;
+        left: 1px;
+        right: 1px;
+        top: 1px;
+        bottom: 1px;
+    }
+    > div {
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        background: linear-gradient(to right, #C4A170, #EEC587);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: #FFF;
+            left: 1px;
+            right: 1px;
+            top: 1px;
+            bottom: 1px;
+        }
+    }
+}
+
+.head {
+    .head__square--left {
+        left: 2%;
+    }
+    .head__square--right {
+        right: 2%;
+    }
+    &:before {
+        content: '';
+        height: 1px;
+        width: auto;
+        flex: 1;
+        background: #EEC587;
+    }
+    &:after {
+        content: '';
+        height: 1px;
+        width: auto;
+        flex: 1;
+        background: #EEC587;
+    }
+    .head__logo {
+        margin: 15px 0;
+        img {
+            width: 100px;
+        }
+    }
+    .head__nav {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        &:before {
+            content: "";
+            height: 1px;
+            width: auto;
+            flex: 1;
+            background: #eec587;
+            margin: 0 10px;
+        }
+        &:after {
+            content: "";
+            height: 1px;
+            width: auto;
+            flex: 1;
+            background: #eec587;
+            margin: 0 10px;
+        }
+        .header__navigation {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li {
+                padding: 0 5px;
+                list-style: none;
+                position: relative;
+                a {
+                    color: #000;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                }
+                > ul {
+                    display: none;
+                    position: absolute;
+                }
+            }
+        }
+    }
+    .head__search {
+        form {
+            position: relative;
+            input {
+                padding: 8px 10px 8px 35px;
+                border: 1px solid #eec587;
+                border-radius: 5px;
+                width: 170px;
+                font-size: 13px;
+                &:focus {
+                    outline: none;
+                    border: 1px solid #EEC587;
+                }
+            }
+            button {
+                position: absolute;
+                border: none;
+                background-color: transparent;
+                left: 5px;
+                top: 5px;
+                color: #888;
+            }
+        }
+    }
+}
 
 /**  **/
 .to-top {
