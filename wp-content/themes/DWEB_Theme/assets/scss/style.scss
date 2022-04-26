@@ -1,0 +1,120 @@
+/*
+Theme Name: AI
+Author: domainlee
+Support: domainlee.niit@gmail.com
+Description: Arch
+Version: 1.0.0
+*/
+
+/* CSS Index
+-------------------------------------
+1. Theme default css
+
+*/
+
+/* 1. Theme default css */
+
+$color-text: #111;
+$color-bg: #e5e5e5;
+$color-link: #000;
+$color-link-hover: #111;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+::selection {
+    background: #111;
+    color: #fff;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.bg-size-cover {
+    background-size: cover;
+}
+/* Theme default css end */
+
+/** 2. Loading **/
+.loading__inner {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin position-center($text-align: center) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: $text-align;
+}
+.loading__list {
+    @include position-center;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #fff;
+        @for $i from 0 through 6 {
+            &:nth-child(#{$i + 1}) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (#{$i/5})+s infinite linear alternate;
+            }
+        }
+    }
+}
+@keyframes blur-text {
+    0% {filter: blur(0px);}
+    100% {filter: blur(4px);}
+}
+
+
+/**  **/
+.to-top {
+    transform: translateY(25px);
+    transition: all 1.5s ease;
+    opacity: 0;
+    &.is-on {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/** 17. Custom OWL **/
+.owl-carousel .owl-item .owl-lazy {
+    max-height: initial !important;
+}
+.owl-nav button {
+    position: absolute;
+    top: 42%;
+    width: 30px;
+    height: 30px;
+    background-color: #000 !important;
+    color: #FFF !important;
+    border-radius: 0 !important;
+    border: 1px solid #ffffffc9 !important;
+    box-shadow: 0 0 0 2px #000;
+}
+.owl-nav button.owl-prev {
+    left: 15px;
+}
+.owl-nav button.owl-next {
+    right: 15px;
+}
