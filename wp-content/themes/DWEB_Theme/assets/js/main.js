@@ -53,7 +53,7 @@
 
     var owlCarousel = function() {
         // SINGLE PAGE - Gallery //
-        $('.single-post__gallery--js').owlCarousel({
+        $('.hero__js').owlCarousel({
             loop: true,
             margin: 0,
             dots: true,
@@ -61,6 +61,7 @@
             lazyLoad: true,
             autoplay: true,
             items: 1,
+
             navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         });
     };
