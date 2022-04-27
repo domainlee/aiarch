@@ -17,8 +17,8 @@ if( have_rows('home_page') ):
             case "layout_form":
                 the_module('form');
                 break;
-            case "layout_member";
-                the_module('member');
+            case "layout_gallery";
+                the_module('gallery', ['gallery_list' => get_sub_field('gallery_list')]);
                 break;
             case "layout_news";
                 the_module('posts-new');

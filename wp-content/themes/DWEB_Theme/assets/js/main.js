@@ -64,6 +64,19 @@
 
             navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         });
+
+        $('.gallery__js').owlCarousel({
+            loop: true,
+            margin: 30,
+            dots: false,
+            nav: false,
+            lazyLoad: true,
+            autoplay: true,
+            items: 1,
+            navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        });
+
+
     };
 
     var masonry = function () {

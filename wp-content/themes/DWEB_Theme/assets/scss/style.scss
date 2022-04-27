@@ -35,6 +35,9 @@ a:hover {
 .bg-size-cover {
     background-size: cover;
 }
+.ratio-2x3 {
+    --bs-aspect-ratio: 130%;
+}
 /* Theme default css end */
 
 /** 2. Loading **/
@@ -234,7 +237,7 @@ a:hover {
         background-size: cover;
         background-position: center;
         .hero__content {
-            padding: 50px 0;
+            padding: 0 0 5%;
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -265,6 +268,45 @@ a:hover {
     }
 }
 
+.gallery {
+    overflow: hidden;
+    .gallery__item {
+        margin: 0 10%;
+        figure {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 280px 280px 0 0;
+            border: 2px solid #e4c591;
+            overflow: hidden;
+            .gallery__content {
+                padding: 50px;
+                background-color: #eee;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                border-radius: 280px 280px 0 0;
+                img {
+                    margin: 0 auto;
+                    height: 80px;
+                    width: initial !important;
+                }
+                div {
+                    margin: 30px 0 0;
+                }
+            }
+        }
+    }
+    .gallery__js {
+        &.owl-carousel {
+            .owl-stage-outer {
+                overflow: inherit !important;
+            }
+        }
+    }
+}
+
 /**  **/
 .to-top {
     transform: translateY(25px);
@@ -277,23 +319,38 @@ a:hover {
 }
 
 /** 17. Custom OWL **/
-.owl-carousel .owl-item .owl-lazy {
-    max-height: initial !important;
-}
-.owl-nav button {
-    position: absolute;
-    top: 42%;
-    width: 30px;
-    height: 30px;
-    background-color: #eec587 !important;
-    color: #FFF !important;
-    border-radius: 0 !important;
-    border: 1px solid #ffffffc9 !important;
-    box-shadow: 0 0 0 2px #eec587;
-}
-.owl-nav button.owl-prev {
-    left: 15px;
-}
-.owl-nav button.owl-next {
-    right: 15px;
+.owl-carousel {
+    .owl-item {
+        .owl-lazy {
+            max-height: initial !important;
+        }
+    }
+    .owl-nav {
+        button {
+            position: absolute;
+            top: 42%;
+            width: 30px;
+            height: 30px;
+            background-color: #eec587 !important;
+            color: #FFF !important;
+            border-radius: 0 !important;
+            border: 1px solid #ffffffc9 !important;
+            box-shadow: 0 0 0 2px #eec587;
+            &.owl-prev {
+                left: 15px;
+            }
+            &.owl-next {
+                right: 15px;
+            }
+        }
+    }
+    .owl-dots {
+        button.owl-dot {
+            &.active {
+                span {
+                    background-color: #eec587;
+                }
+            }
+        }
+    }
 }
