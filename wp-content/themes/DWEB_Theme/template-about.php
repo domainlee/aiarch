@@ -6,16 +6,11 @@
 <?php
 if( have_rows('about_page') ):
     while ( have_rows('about_page') ) : the_row();
+        the_module('page-about-header', ['title' => get_the_title(), 'content' => get_the_content()]);
         $type = get_row_layout();
         switch ($type) {
-            case "layout_banner":
-                the_module('hero-slider', ['list' => get_sub_field('banner_list'), 'title' => get_sub_field('banner_title'), 'content' => get_sub_field('banner_content')]);
-                break;
-            case "layout_member";
-                the_module('member');
-                break;
-            case "layout_strategy":
-                the_module('strategy', ['heading' => get_sub_field('strategy_heading'), 'image' => get_sub_field('strategy_image'), 'list' => get_sub_field('strategy_list'), 'bg' => get_sub_field('background_image_option')]);
+            case "layout_gallery";
+                the_module('gallery', ['gallery_list' => get_sub_field('gallery_list'), 'title' => get_sub_field('gallery_heading')]);
                 break;
             default:
                 break;

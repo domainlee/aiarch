@@ -422,7 +422,7 @@ function dweb_scripts()
 //    wp_register_script('waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array('jquery'), '1.0.0', true); // Custom scripts
 //    wp_enqueue_script('waypoints'); // Enqueue it!
 
-    wp_register_script('main', get_template_directory_uri() . '/assets/build/js/main.bundle.js', array('jquery'), '1.0.0', true); // Custom scripts
+    wp_register_script('main', get_template_directory_uri() . '/assets/build/js/main.bundle.js', array('jquery'), '1.0.1', true); // Custom scripts
     wp_enqueue_script('main'); // Enqueue it!
 
 }

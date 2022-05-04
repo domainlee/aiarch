@@ -14,14 +14,20 @@ if( have_rows('home_page') ):
             case "layout_profilo":
                 the_module('profilo');
                 break;
-            case "layout_form":
-                the_module('form');
-                break;
             case "layout_gallery";
-                the_module('gallery', ['gallery_list' => get_sub_field('gallery_list')]);
+                the_module('gallery', ['gallery_list' => get_sub_field('gallery_list'), 'title' => get_sub_field('gallery_heading'), 'button_text' => get_sub_field('gallery_button_text'), 'button_url' => get_sub_field('gallery_button_url')]);
+                break;
+            case "layout_service":
+                the_module('service', ['service_list'=> get_sub_field('service_list'), 'service_heading'=> get_sub_field('service_heading')]);
+                break;
+            case "layout_client";
+                the_module('client');
                 break;
             case "layout_news";
-                the_module('posts-new');
+                the_module('news');
+                break;
+            case "layout_form":
+                the_module('form');
                 break;
             default:
                 break;

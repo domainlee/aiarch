@@ -11,9 +11,9 @@
             <?php foreach ($list as $b): ?>
                 <div>
                     <a href="" target="_blank">
-                        <figure class="hero__image ratio ratio-21x9 m-0 owl-lazy" data-src="<?= $b['banner_image']['url'] ?>">
+                        <figure class="hero__image ratio ratio-16x9 m-0 owl-lazy" data-src="<?= $b['banner_image']['url'] ?>">
                             <div class="hero__content">
-                                <h3><?= $b['banner_heading'] ?></h3>
+                                <h3 class="to-top"><?= $b['banner_heading'] ?></h3>
                             </div>
                         </figure>
                     </a>

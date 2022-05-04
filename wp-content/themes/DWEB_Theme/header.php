@@ -105,16 +105,9 @@ endif; ?>
     <div class="square position-absolute head__square--right"><div></div></div>
 </header>
 
-<!-- start loading-->
-<div class="loading">
-    <div class="loading__inner">
-        <div class="loading__list">
-            <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
-        </div>
-    </div>
+<div id="preloader">
+    <div class="loader_line"></div>
 </div>
-<!-- end loading-->
-
 
 
 

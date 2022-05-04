@@ -1,30 +1,33 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 </style>
-<?php
-     $save_post = $post;
-     $post = get_post($post->ID);
-     setup_postdata( $post ); // hello
-     $output = get_the_excerpt();
-     $post = $save_post;
-?>
 
-<?php
-    the_module('heading', ['title' => get_the_title(), 'description'=> $output]);
-?>
-
-<div class="home-page">
+<div class="single">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-3">
+                <div>
+                    <?php
+                        $post = get_post();
+                        echo get_avatar( $post->post_author );
+                        $info = get_user_meta($post->post_author);
+                        $nickname = $info['last_name'][0] || $info['first_name'][0] ? $info['last_name'][0].' '.$info['first_name'][0]:$info['nickname'][0];
+                    ?>
+                </div>
+                <div>Đăng bởi: <?= $nickname ?></div>
+                <div>
+                    Vào lúc: <?php the_time('d/m/Y'); ?>
+                </div>
+            </div>
+            <div class="col-md-9">
                 <div class="hom-page__inner">
                     <div class="home-page__main">
                         <div class="single-post">
                             <div class="single-post__inner">
                                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-                                    <div class="single-post__border">
-                                        <hr>
-                                    </div>
+                                    <h2 class="single__heading">
+                                        <?= get_the_title() ?>
+                                    </h2>
                                     <div class="sigle-post__date">
                                         <?php the_time('d/m/Y'); ?>
                                     </div>

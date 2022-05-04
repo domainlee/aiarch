@@ -2,9 +2,11 @@
     'use strict';
     var loading = function () {
         $(window).on("load", function () {
-            $('.loading').delay(666).fadeOut('slow');
-            $('body').delay(666);
-            animation();
+            var speed = 500;
+            setTimeout(function () {
+                loading2();
+                animation();
+            }, speed);
         });
     }
 
@@ -61,7 +63,8 @@
             lazyLoad: true,
             autoplay: true,
             items: 1,
-
+            animateOut: 'fadeOut',
+            autoplayHoverPause: true,
             navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         });
 
@@ -73,9 +76,22 @@
             lazyLoad: true,
             autoplay: true,
             items: 1,
+            autoplayHoverPause: true,
             navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         });
 
+        $('.client__js').owlCarousel({
+            loop: true,
+            margin: 30,
+            dots: false,
+            nav: true,
+            lazyLoad: true,
+            autoplay: true,
+            animateOut: 'fadeOut',
+            items: 1,
+            autoplayHoverPause: true,
+            navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        });
 
     };
 
@@ -154,8 +170,67 @@
         }
     }
 
+    var form = function () {
+        $('.form-contact').submit(function(e) {
+            var t = $(this);
+            var name  = t.find('.contact__name').val();
+            var email  = t.find('.contact__email').val();
+            var phone  = t.find('.contact__phone').val();
+            var address  = t.find('.contact__address').val();
+
+            var title  = t.find('.contact__title').val();
+            var service  = t.find('.contact__service').val();
+            var content  = t.find('.contact__content').val();
+
+            var url = $('.contact__redirect').val();
+
+            var modal = $('#checkoutModal');
+
+            var data = {
+                'action': 'contact',
+                'name': name,
+                'email': email,
+                'phone': phone,
+                'address': address,
+                'title': title,
+                'service': service,
+                'content': content,
+            };
+
+            e.preventDefault();
+            if ( $(this).parsley().isValid() ) {
+                $.post(ajaxurl, data, function (e) {
+                    var obj = JSON.parse(e);
+                    if(obj.code == 1) {
+                        t.find('.contact__name').val('');
+                        t.find('.contact__phone').val('');
+                        alert('Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. Cảm ơn.');
+                        window.location.href = url
+                    }
+                });
+            }
+        });
+    }
+
+    var loading2 = function () {
+        "use strict";
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+        var preloader = $("#preloader");
+        if (!isMobile) {
+            setTimeout(function () {
+                preloader.addClass("preloaded");
+            }, 800);
+            setTimeout(function () {
+                preloader.remove();
+            }, 2000);
+        } else {
+            preloader.remove();
+        }
+    }
+
     $(document).ready(function() {
         loading();
+        loading2();
         nav();
         lazy();
         owlCarousel();
@@ -164,6 +239,7 @@
         sidebarScroll();
         skill();
         sticky();
+        form();
         $(document).on( 'scroll', function(){
             animation();
         });
