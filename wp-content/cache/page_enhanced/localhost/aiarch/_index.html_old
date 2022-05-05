@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta property="fb:app_id" content="210041499841167" />
+    <title>Kiến trúc A&amp;I</title>
+
+    <!--		<link href="//www.google-analytics.com" rel="dns-prefetch">-->
+    <link href="http://localhost/aiarch/wp-content/uploads/2022/04/favicon.png" rel="shortcut icon">
+    <link href="http://localhost/aiarch/wp-content/uploads/2022/04/favicon.png" rel="apple-touch-icon-precomposed">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kiến trúc A&amp;I">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <title>Kiến trúc A&amp;I &#8211; Kiến trúc A&amp;I</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://localhost/aiarch/wp-includes/css/dist/block-library/style.min.css?ver=5.8.4' media='all' />
+<link rel='stylesheet' id='html5blank-css'  href='http://localhost/aiarch/wp-content/themes/DWEB_Theme/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='main-css'  href='http://localhost/aiarch/wp-content/themes/DWEB_Theme/assets/build/css/main.min.css?ver=1.1' media='all' />
+<script type='text/javascript' src='http://localhost/aiarch/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='http://localhost/aiarch/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="http://localhost/aiarch/wp-json/" /><link rel="alternate" type="application/json" href="http://localhost/aiarch/wp-json/wp/v2/pages/81" /><link rel="alternate" type="application/json+oembed" href="http://localhost/aiarch/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Faiarch%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://localhost/aiarch/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Faiarch%2F&#038;format=xml" />
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=210041499841167&autoLogAppEvents=1"></script>
+    <script type="text/javascript">
+        var ajaxurl = "http://localhost/aiarch/wp-admin/admin-ajax.php";
+    </script>
+
+
+</head>
+<body class="home page-template page-template-template-home page-template-template-home-php page page-id-81 cooking-and-enjoying">
+
+<header class="head position-relative d-flex align-items-center">
+    <div class="square position-absolute head__square--left"><div></div></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="head__logo">
+                        <a href="http://localhost/aiarch">
+                            <img src="http://localhost/aiarch/wp-content/uploads/2022/04/Logo.png" alt="Kiến trúc A&amp;I">
+                        </a>
+                    </div>
+                    <div class="head__nav">
+                        <ul id="menu-header" class="header__navigation"><li id="menu-item-1817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-81 current_page_item menu-item-1817"><a href="http://localhost/aiarch/" aria-current="page">Trang chủ</a></li>
+<li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1815"><a href="http://localhost/aiarch/dich-vu/">Dịch vụ</a></li>
+<li id="menu-item-1900" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1900"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/">Thiết kế kiến trúc</a>
+<ul class="sub-menu">
+	<li id="menu-item-1904" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1904"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/thiet-ke-nha-pho/">Thiết kế nhà phố</a></li>
+	<li id="menu-item-1902" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1902"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/thiet-ke-biet-thu/">Thiết kế biệt thự</a></li>
+	<li id="menu-item-1903" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1903"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/thiet-ke-lau-dai/">Thiết kế lâu đài</a></li>
+	<li id="menu-item-1901" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1901"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/cac-cong-trinh-khac/">Các công trình khác</a></li>
+</ul>
+</li>
+<li id="menu-item-1905" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1905"><a href="http://localhost/aiarch/category/thiet-ke-noi-that/">Thiết kế nội thất</a></li>
+<li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1814"><a href="http://localhost/aiarch/gioi-thieu/">Giới thiệu</a></li>
+<li id="menu-item-1816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1816"><a href="http://localhost/aiarch/lien-he-2/">Liên hệ</a></li>
+</ul>                    </div>
+                    <div class="head__search">
+                        <!-- search -->
+<form class="search" method="get" action="http://localhost/aiarch" role="search">
+	<input class="search-input" type="search" name="s" placeholder="Thiết kế kiến trúc, nội thất, blog ...">
+	<button class="search-submit" type="submit" role="button"><i class="fa fa-search"></i></button>
+</form>
+<!-- /search -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="nav-mobile d-none">
+                    <a class="nav-mobile__button button__nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <ul id="menu-header-1" class="header__navigation--mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-81 current_page_item menu-item-1817"><a href="http://localhost/aiarch/" aria-current="page">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1815"><a href="http://localhost/aiarch/dich-vu/">Dịch vụ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1900"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/">Thiết kế kiến trúc</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1904"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/thiet-ke-nha-pho/">Thiết kế nhà phố</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1902"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/thiet-ke-biet-thu/">Thiết kế biệt thự</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1903"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/thiet-ke-lau-dai/">Thiết kế lâu đài</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1901"><a href="http://localhost/aiarch/category/thiet-ke-kien-truc/cac-cong-trinh-khac/">Các công trình khác</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1905"><a href="http://localhost/aiarch/category/thiet-ke-noi-that/">Thiết kế nội thất</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1814"><a href="http://localhost/aiarch/gioi-thieu/">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1816"><a href="http://localhost/aiarch/lien-he-2/">Liên hệ</a></li>
+</ul>                </div>
+            </div>
+        </div>
+    </div>
+    <div class="square position-absolute head__square--right"><div></div></div>
+</header>
+
+<div id="preloader">
+    <div class="loader_line"></div>
+</div>
+
+
+
+
+
+<section class="hero">
+        <div class="hero__slider">
+        <div class="hero__js owl-carousel owl-theme">
+                            <div>
+                    <a href="" target="_blank">
+                        <figure class="hero__image ratio ratio-16x9 m-0 owl-lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/04/image-1.png">
+                            <div class="hero__content">
+                                <h3 class="to-top">Thiết kế sáng tạo</h3>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                            <div>
+                    <a href="" target="_blank">
+                        <figure class="hero__image ratio ratio-16x9 m-0 owl-lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/04/image-1.png">
+                            <div class="hero__content">
+                                <h3 class="to-top">Giá trị theo thời gian</h3>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                            <div>
+                    <a href="" target="_blank">
+                        <figure class="hero__image ratio ratio-16x9 m-0 owl-lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/04/image-1.png">
+                            <div class="hero__content">
+                                <h3 class="to-top">Đẳng cấp theo năm tháng</h3>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                    </div>
+    </div>
+    
+</section>
+
+
+<section class="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-8">
+                <h2 class="gallery__heading text-center to-top">Welcome to A&I Architecture Gallery</h2>
+                <div class="gallery__js owl-carousel owl-theme to-top">
+                                            <div class="gallery__item">
+                            <a href="#">
+                                <figure class="ratio ratio-2x3" style="background-image: url(http://localhost/aiarch/wp-content/uploads/2022/04/image-1.png)">
+                                    <div class="gallery__content">
+                                        <img src="http://localhost/aiarch/wp-content/uploads/2022/04/Logo.png" alt="" />
+                                        <div class=""><p>Công ty Cổ phần Tư vấn Thiết kế Kiến trúc và Nội thất A&amp;I được thành lập và hoạt động theo GP ĐKKD số 0109076705 do Sở Kế hoạch Đầu tư TP.HN cấp lần đầu ngày 22/01/2016, thay đổi lần 1 ngày 20/02/2020.</p>
+<p>Với đội ngũ Kiến trúc sư nhiều kinh nghiệm trong nghề, Kỹ sư trẻ tràn đầy nhiệt huyết , A&amp;I đã có kinh nghiệm tư vấn, lên ý tưởng thiết kế và thi công chuyên nghiệp. Đội ngũ ban đầu đã mở rộng nhân sự ,khối văn phòng, khối kỹ thuật…với các phòng ban chuyên môn và đội nhóm làm việc độc lập.</p>
+<p>Các dự án thiết kế biệt thự, chung cư, nhà vườn và công trình xây dựng của A&amp;I trải dài thị trường Việt Nam.</p>
+<p>Năng lực thiết kế và thi công của A&amp;I bao gồm các lĩnh vực tư vấn, thiết kế, xây dựng các công trình nhà dân, biệt thự,nhà vườn,chung cư, hoàn thiện nội thất công trình.</p>
+<p>Đội ngũ Kiến trúc sư, Họa viên là một trong những thế mạnh chuyên biệt của A&amp;I.</p>
+</div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                                            <div class="gallery__item">
+                            <a href="#">
+                                <figure class="ratio ratio-2x3" style="background-image: url(http://localhost/aiarch/wp-content/uploads/2020/12/124812840_388609739244040_7871507604179139855_o.jpg)">
+                                    <div class="gallery__content">
+                                        <img src="http://localhost/aiarch/wp-content/uploads/2022/04/Logo.png" alt="" />
+                                        <div class=""><p>Công ty Cổ phần Tư vấn Thiết kế Kiến trúc và Nội thất A&amp;I được thành lập và hoạt động theo GP ĐKKD số 0109076705 do Sở Kế hoạch Đầu tư TP.HN cấp lần đầu ngày 22/01/2016, thay đổi lần 1 ngày 20/02/2020.</p>
+<p>Với đội ngũ Kiến trúc sư nhiều kinh nghiệm trong nghề, Kỹ sư trẻ tràn đầy nhiệt huyết , A&amp;I đã có kinh nghiệm tư vấn, lên ý tưởng thiết kế và thi công chuyên nghiệp. Đội ngũ ban đầu đã mở rộng nhân sự ,khối văn phòng, khối kỹ thuật…với các phòng ban chuyên môn và đội nhóm làm việc độc lập.</p>
+<p>Các dự án thiết kế biệt thự, chung cư, nhà vườn và công trình xây dựng của A&amp;I trải dài thị trường Việt Nam.</p>
+<p>Năng lực thiết kế và thi công của A&amp;I bao gồm các lĩnh vực tư vấn, thiết kế, xây dựng các công trình nhà dân, biệt thự,nhà vườn,chung cư, hoàn thiện nội thất công trình.</p>
+<p>Đội ngũ Kiến trúc sư, Họa viên là một trong những thế mạnh chuyên biệt của A&amp;I.</p>
+</div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                                    </div>
+                                <div class="gallery__button button__default to-top">
+                    <a href="#" target="_blank">Xem Thêm </a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</section>
+<section class="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="service__heading text-center to-top">Lĩnh vực hoạt động</h2>
+            </div>
+        </div>
+    </div>
+        <div class="service__row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="service__item">
+                        <div class="service__col service__number to-top">
+                            01                        </div>
+                        <div class="service__col service__image to-top">
+                            <div class="service__image--inner">
+                                <div class="square position-absolute left-top"><div></div></div>
+                                <div class="square position-absolute right-top"><div></div></div>
+                                <a class="service__button" href="#"><figure class="ratio ratio-2x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/04/image-1.png"></figure></a>
+                                <div class="square position-absolute left-bottom"><div></div></div>
+                                <div class="square position-absolute right-bottom"><div></div></div>
+                            </div>
+                        </div>
+                        <div class="service__col service__content to-top">
+                            <h2 class="service__title"><a href="#" target="_blank">Thiết kế nội thất</a></h2>
+                            <div class="service__intro">
+                                Chúng tôi tin rằng, mỗi không gian sống đều cần được “đo ni đóng giày” để phù hợp với phong cách sống của chủ nhân. Công trình được thiết kế bởi A&I tạo nên sự khác biệt với chuyên môn và tính thẩm mỹ độc đáo với sở trường là những thiết kế mang âm hưởng Tân cổ điển. Dựa trên yêu cầu và sở thích của khách hàng, chúng tôi tư vấn ý tưởng nội thất, phân bổ mặt bằng, ánh sáng, trần-tường-sàn, lựa chọn nội thất, màu sắc, chất liệu, đồ trang trí cho toàn công trình.  
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="service__row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="service__item">
+                        <div class="service__col service__number to-top">
+                            02                        </div>
+                        <div class="service__col service__image to-top">
+                            <div class="service__image--inner">
+                                <div class="square position-absolute left-top"><div></div></div>
+                                <div class="square position-absolute right-top"><div></div></div>
+                                <a class="service__button" href="#"><figure class="ratio ratio-2x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/04/image-1.png"></figure></a>
+                                <div class="square position-absolute left-bottom"><div></div></div>
+                                <div class="square position-absolute right-bottom"><div></div></div>
+                            </div>
+                        </div>
+                        <div class="service__col service__content to-top">
+                            <h2 class="service__title"><a href="#" target="_blank">Thiết kế kiến trúc</a></h2>
+                            <div class="service__intro">
+                                Tại A&I, mỗi thiết kế kiến trúc đều được thực hiện với tâm huyết và chất xám - làm sao để mỗi căn nhà, mỗi ô cửa hay từng viên gạch đều là niềm tự hào, kể được câu chuyện riêng, phản ánh cá tính, mong ước của chính chủ nhân.
+Với phương châm thiết kế lấy Con Người là trung tâm, chúng tôi mang đến những công trình hoàn mỹ, đặt nhu cầu của người sử dụng lên hàng đầu cũng như là điểm nhấn tô điểm cho cảnh quan chung nơi công trình toạ lạc.                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<section class="profilo">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="profilo__headline to-top">Các dự án tiêu biểu</h2>
+            </div>
+        </div>
+    </div>
+    <div class="profilo__row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="profilo__list to-top">
+                                                    <div class="profilo__col">
+                                <div class="profilo__item" data-images="http://localhost/aiarch/wp-content/uploads/2022/03/2_2359e975cb37404b8c1904a51f0ec388_master-250x313.jpg,http://localhost/aiarch/wp-content/uploads/2022/03/1_7b30c6d7c6074b399d074aa7b624a963_master-250x250.png,http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__15__c853228c2c79482d85e5af9f68e94448_master-250x250.png,http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__38__ba2f9b3a13f042ab9e8a65193be5644f_master-250x250.png" data-image-old="http://localhost/aiarch/wp-content/uploads/2022/03/2_2359e975cb37404b8c1904a51f0ec388_master-768x960.jpg">
+                                    <div class="profilo__item--inner">
+                                        <div class="square position-absolute left-top"><div></div></div>
+                                        <div class="square position-absolute right-top"><div></div></div>
+                                        <a href="http://localhost/aiarch/b-tran-lich-lam-cung-trang-phuc-remmy/">
+                                            <figure class="profilo__image ratio ratio-2x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/03/2_2359e975cb37404b8c1904a51f0ec388_master-768x960.jpg" title="Dự án 3">
+                                                <div class="profilo__content">
+                                                    <h3 class="profilo__title">Dự án 3</h3>
+                                                    <div class="">
+                                                        <span>Thông tin dự án</span>                                                        <p><span>Dự án: </span><strong>Thiết kế kiến trúc</strong></p>                                                                                                                                                                                                                            </div>
+                                                </div>
+                                            </figure>
+                                        </a>
+                                        <div class="square position-absolute left-bottom"><div></div></div>
+                                        <div class="square position-absolute right-bottom"><div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <div class="profilo__col">
+                                                            <div class="profilo__item" data-images="http://localhost/aiarch/wp-content/uploads/2022/03/1_7b30c6d7c6074b399d074aa7b624a963_master-250x250.png,http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__15__c853228c2c79482d85e5af9f68e94448_master-250x250.png,http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__38__ba2f9b3a13f042ab9e8a65193be5644f_master-250x250.png" data-image-old="http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__15__c853228c2c79482d85e5af9f68e94448_master-768x768.png">
+                                        <div class="profilo__item--inner">
+                                            <div class="square position-absolute left-top"><div></div></div>
+                                            <div class="square position-absolute right-top"><div></div></div>
+                                            <a href="http://localhost/aiarch/hello-world/">
+                                                <figure class="profilo__image ratio ratio-2x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__15__c853228c2c79482d85e5af9f68e94448_master-768x768.png" title="Dự án 5">
+                                                    <div class="profilo__content">
+                                                        <h3 class="profilo__title">Dự án 5</h3>
+                                                        <div class="">
+                                                            <span>Thông tin dự án</span>                                                            <p><span>Dự án: </span><strong>Thiết kế kiến trúc</strong></p>                                                                                                                                                                                                                                            </div>
+                                                    </div>
+                                                </figure>
+                                            </a>
+                                            <div class="square position-absolute left-bottom"><div></div></div>
+                                            <div class="square position-absolute right-bottom"><div></div></div>
+                                        </div>
+                                    </div>
+                                                                <div class="profilo__item" data-images="" data-image-old="http://localhost/aiarch/wp-content/uploads/2022/03/5_5baaeb5565a24729aba7a95f249619df_master-768x960.jpg">
+                                        <div class="profilo__item--inner">
+                                            <div class="square position-absolute left-top"><div></div></div>
+                                            <div class="square position-absolute right-top"><div></div></div>
+                                            <a href="http://localhost/aiarch/hua-vi-van-soai-ca-phien-ban-viet/">
+                                                <figure class="profilo__image ratio ratio-2x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/03/5_5baaeb5565a24729aba7a95f249619df_master-768x960.jpg" title="Dự án 2">
+                                                    <div class="profilo__content">
+                                                        <h3 class="profilo__title">Dự án 2</h3>
+                                                        <div class="">
+                                                            <span>Thông tin dự án</span>                                                            <p><span>Dự án: </span><strong>Thiết kế kiến trúc</strong></p>                                                                                                                                                                                                                                            </div>
+                                                    </div>
+                                                </figure>
+                                            </a>
+                                            <div class="square position-absolute left-bottom"><div></div></div>
+                                            <div class="square position-absolute right-bottom"><div></div></div>
+                                        </div>
+                                    </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="client">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="client__heading to-top">Khách hàng nói gì về chúng tôi</h2>
+            </div>
+        </div>
+    </div>
+    <div class="client__row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="client__list client__js owl-carousel owl-theme to-top">
+                                                <div class="client__item">
+                            <div class="client__left">
+                                <div class="client__image">
+                                    <div class="square position-absolute left-top"><div></div></div>
+                                    <div class="square position-absolute right-top"><div></div></div>
+                                    <figure class="ratio ratio-1x1 owl-lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/04/image-1.png"></figure>
+                                    <div class="square position-absolute left-bottom"><div></div></div>
+                                    <div class="square position-absolute right-bottom"><div></div></div>
+                                </div>
+                            </div>
+                            <div class="client__right">
+                                <div class="client__content">
+                                    <div class="client__rate"><i></i><i></i><i></i><i></i><i></i></div>
+                                    <h3 class="client__title">Biệt thự Elegant Villa</h3>
+                                    <div class="client__intro">“Sự khác biệt nằm ở trong chi tiết. Tôi rất hài lòng với chất lượng công trình, dịch vụ và cái tâm của A&I.”
+Mr. L - Gia chủ </div>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="client__item">
+                            <div class="client__left">
+                                <div class="client__image">
+                                    <div class="square position-absolute left-top"><div></div></div>
+                                    <div class="square position-absolute right-top"><div></div></div>
+                                    <figure class="ratio ratio-1x1 owl-lazy" data-src="http://localhost/aiarch/wp-content/uploads/2020/12/shutterstock_605549603_huge.jpg"></figure>
+                                    <div class="square position-absolute left-bottom"><div></div></div>
+                                    <div class="square position-absolute right-bottom"><div></div></div>
+                                </div>
+                            </div>
+                            <div class="client__right">
+                                <div class="client__content">
+                                    <div class="client__rate"><i></i><i></i><i></i><i></i><i></i></div>
+                                    <h3 class="client__title">Biệt thự Elegant Villa 2</h3>
+                                    <div class="client__intro">“Sự khác biệt nằm ở trong chi tiết. Tôi rất hài lòng với chất lượng công trình, dịch vụ và cái tâm của A&I.”
+Mr. L - Gia chủ </div>
+                                </div>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="news__inner">
+                    <h2 class="news__headline to-top">Tin Tức</h2>
+                    <div class="news__list to-top">
+                                                <div class="news__item">
+                            <a href="http://localhost/aiarch/hello-world/">
+                                <div class="news__image">
+                                    <div class="news__image--inner">
+                                        <div class="square position-absolute left-top"><div></div></div>
+                                        <div class="square position-absolute right-top"><div></div></div>
+                                        <figure class="ratio ratio-4x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__15__c853228c2c79482d85e5af9f68e94448_master-768x768.png"></figure>
+                                        <div class="square position-absolute left-bottom"><div></div></div>
+                                        <div class="square position-absolute right-bottom"><div></div></div>
+                                    </div>
+                                </div>
+                                <div class="news__content">
+                                    <h3 class="news__title">Dự án 5</h3>
+                                    <div class="news__intro">Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</div>
+                                    <div class="news__data">
+                                        23/02/2018                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                <div class="news__item">
+                            <a href="http://localhost/aiarch/ngay-khai-truong-gumac-la-thuong-hieu-khach-hang-den-mua-nhieu-nhat-trung-tam-su-van-hanh/">
+                                <div class="news__image">
+                                    <div class="news__image--inner">
+                                        <div class="square position-absolute left-top"><div></div></div>
+                                        <div class="square position-absolute right-top"><div></div></div>
+                                        <figure class="ratio ratio-4x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/03/thiet_ke_khong_ten__38__ba2f9b3a13f042ab9e8a65193be5644f_master-768x768.png"></figure>
+                                        <div class="square position-absolute left-bottom"><div></div></div>
+                                        <div class="square position-absolute right-bottom"><div></div></div>
+                                    </div>
+                                </div>
+                                <div class="news__content">
+                                    <h3 class="news__title">Dự án 4</h3>
+                                    <div class="news__intro">Ngày 25/01/2018 vừa qua là ngày TTTM Vạn Hạnh mall quận 10 khai trương đồng thời cũng là ngày mà showroom đầu tiên trong năm... <a class="view-article" href="http://localhost/aiarch/"></a></div>
+                                    <div class="news__data">
+                                        23/02/2018                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                <div class="news__item">
+                            <a href="http://localhost/aiarch/b-tran-lich-lam-cung-trang-phuc-remmy/">
+                                <div class="news__image">
+                                    <div class="news__image--inner">
+                                        <div class="square position-absolute left-top"><div></div></div>
+                                        <div class="square position-absolute right-top"><div></div></div>
+                                        <figure class="ratio ratio-4x3 lazy" data-src="http://localhost/aiarch/wp-content/uploads/2022/03/2_2359e975cb37404b8c1904a51f0ec388_master-768x960.jpg"></figure>
+                                        <div class="square position-absolute left-bottom"><div></div></div>
+                                        <div class="square position-absolute right-bottom"><div></div></div>
+                                    </div>
+                                </div>
+                                <div class="news__content">
+                                    <h3 class="news__title">Dự án 3</h3>
+                                    <div class="news__intro">&nbsp; Tham dự Liên hoan lần thứ 9 “Phim Công chiếu Quốc tế” tại Philippines, B Trần đã chứng tỏ gu thời trang tinh tế,... <a class="view-article" href="http://localhost/aiarch/"></a></div>
+                                    <div class="news__data">
+                                        23/02/2018                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            </div>
+                    <div class="button__default to-top">
+                        <a href="#" target="_blank">Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer" >
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="footer__inner">
+                    <div class="footer__col">
+                        <div class="footer__logo">
+                            <img src="http://localhost/aiarch/wp-content/uploads/2022/04/Logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="">
+                            <p><strong>Công ty cổ phần tư vấn thiết kế kiến trúc và nội thất A&#038;I</strong></p>
+<p>Địa chỉ: Số 23 Lê Văn Lương, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội<br />
+Hotline: 0856 678 555<br />
+Email: info@kientrucnoithatcaocap.vn</p>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__headline">Liên kết</h3>
+                        <div class="footer__social">
+                                                            <a href="https://www.instagram.com/cooken.vn/">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                                            <a href="https://www.youtube.com/user/mallorik13rus">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                                            <a href="https://www.facebook.com/Cookenvn">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                                    </div>
+                        <h3 class="footer__headline">Nhận tư vấn của chúng tôi</h3>
+                        <div class="footer__form">
+                            <form class="form-contact" method="post" enctype="multipart/form-data" data-parsley-validate novalidate>
+                                <div class="form-contact__row">
+                                    <input class="contact__name" type="text" name="name" placeholder="Tên của bạn" required="required" data-parsley-minlength="5" data-parsley-error-message="Không được để trống"/>
+                                </div>
+                                <div class="form-contact__row">
+                                    <input class="contact__phone" type="text" name="phone" placeholder="Số điện thoại của bạn" data-parsley-type="digits" data-parsley-length="[10,11]" required="required" data-parsley-error-message="Không được để trống"/>
+                                </div>
+                                <button class="form_submit contact__btn-submit" type="submit">Đăng ký tư vấn</button>
+                                <input type="hidden" class="contact__redirect" value="http://localhost/aiarch" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer__copywriter">
+        © Bản quyền thuộc về Công ty cổ phần tư vấn thiết kế kiến trúc và nội thất A&I
+    </div>
+</footer>
+
+
+<script type='text/javascript' src='http://localhost/aiarch/wp-content/themes/DWEB_Theme/assets/build/js/main.bundle.js?ver=1.0.1' id='main-js'></script>
+<script type='text/javascript' src='http://localhost/aiarch/wp-includes/js/wp-embed.min.js?ver=5.8.4' id='wp-embed-js'></script>
+
+
+</body>
+
+</html>
+
+
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced 
+
+Served from: localhost @ 2022-05-05 09:22:17 by W3 Total Cache
+-->
