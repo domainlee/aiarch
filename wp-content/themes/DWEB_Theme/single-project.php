@@ -42,7 +42,15 @@
                                     <div class="single__info--row">
                                         <div>
                                             <div>Công trình</div>
-                                            <div>cccc</div>
+                                            <div>
+                                                <?php
+                                                    $term = get_the_terms(get_the_ID(), 'category');
+                                                    foreach ($term as $t) {
+                                                        $term_link = get_term_link($t->term_id);
+                                                        echo '<a class="me-2" href="'.$term_link.'" target="_blank">'.$t->name.'</a>';
+                                                    }
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="single__info--row">
