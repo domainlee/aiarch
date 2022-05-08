@@ -321,7 +321,7 @@ function wpa_cpt_tags( $query ) {
         $query->set( 'post_type', array( 'post', 'du-an', 'bai-viet' ) );
     }
     if ( $query->is_search() && $query->is_main_query() ) {
-        $query->set( 'post_type', array( 'san_pham' ) );
+        $query->set( 'post_type', array( 'post' ) );
     }
 }
 add_action( 'pre_get_posts', 'wpa_cpt_tags' );

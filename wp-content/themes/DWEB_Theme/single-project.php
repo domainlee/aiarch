@@ -5,7 +5,7 @@
 <div class="single">
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3">
                 <div class="single__author">
                     <div>
                         <?php
@@ -29,14 +29,21 @@
                                     <?= get_the_title() ?>
                                 </h2>
                                 <div>
+                                    <?php
+                                        $post_price = get_field('post_price');
+                                        $post_ground = get_field('post_ground');
+                                        $post_bedrooms = get_field('post_bedrooms');
+                                        $post_name = get_field('post_name');
+                                        $post_address = get_field('post_address');
+                                    ?>
                                     <div class="single__info--row">
                                         <div>
                                             <div>Chủ nhà</div>
-                                            <div>aaa</div>
+                                            <div><?= $post_name ? $post_name:'---' ?></div>
                                         </div>
                                         <div>
                                             <div>Địa chỉ</div>
-                                            <div>bbb</div>
+                                            <div><?= $post_address ? $post_address:'---' ?></div>
                                         </div>
                                     </div>
                                     <div class="single__info--row">
@@ -94,7 +101,39 @@
                 </div>
             </div>
         </div>
-
+        <div class="row mt-5">
+            <div class="col-12">
+                <?php
+                    $post_images = get_field('post_images');
+                    $post_title_project = get_field('post_title_project');
+                    $post_intro_project = get_field('post_intro_project');
+                    $footer_social = get_field('footer_social', 'options');
+                ?>
+                <div class="single__gallery owl-carousel owl-theme">
+                    <?php foreach ($post_images as $p): ?>
+                    <div class="single__gallery--item">
+                        <figure class="ratio ratio-16x9 m-0 owl-lazy" data-src="<?= $p['url'] ?>"></figure>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="single__rating text-center">
+                    <div class="client__rate"><i></i><i></i><i></i><i></i><i></i></div>
+                    <h3><?= $post_title_project ? $post_title_project:'---' ?></h3>
+                    <div><?= $post_intro_project ? $post_intro_project:'---' ?></div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="single__social">
+                    <div class="footer__social">
+                        <?php foreach ($footer_social as $i): ?>
+                            <a href="<?= $i['footer_social_url'] ?>">
+                                <i class="<?= $i['footer_social_image'] ?>"></i>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row relation news mb-3">
             <div class="col-12">
                 <?php

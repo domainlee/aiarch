@@ -5,7 +5,7 @@
 <div class="single">
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3">
                 <div class="single__author">
                     <div>
                         <?php

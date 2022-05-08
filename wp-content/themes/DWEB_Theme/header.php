@@ -64,7 +64,7 @@ endif; ?>
                             <img src="<?= $logoHeader; ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     </div>
-                    <div class="head__nav">
+                    <div class="head__nav d-none d-md-block">
                         <?php if (has_nav_menu('header-primary')) {
                             wp_nav_menu(
                                 array(
@@ -75,29 +75,28 @@ endif; ?>
                             );
                         } ?>
                     </div>
-                    <div class="head__search">
+                    <div class="head__search d-none d-md-block">
                         <?= get_search_form(); ?>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="nav-mobile d-none">
-                    <a class="nav-mobile__button button__nav-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                    <?php if (has_nav_menu('header-primary')) {
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'header-primary',
-                                'container_class' => 'header__menu--mobile',
-                                'menu_class' => 'header__navigation--mobile'
-                            )
-                        );
-                    } ?>
+                    <div class="nav-mobile d-block d-md-none">
+                        <a class="toggle-menu">
+                            <span class="fa-navicon__custom"><i></i></span>
+                        </a>
+                        <div class="nav-mobile__menu nav__mobile">
+                            <?php if (has_nav_menu('header-primary')) {
+                                wp_nav_menu(
+                                    array(
+                                        'theme_location' => 'header-primary',
+                                        'container_class' => 'header__menu--mobile',
+                                        'menu_class' => 'header__navigation--mobile'
+                                    )
+                                );
+                            } ?>
+                            <div class="nav-mobile__search">
+                                <?= get_search_form(); ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

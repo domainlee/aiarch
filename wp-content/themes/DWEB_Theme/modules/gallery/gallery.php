@@ -8,7 +8,7 @@
 <section class="gallery">
     <div class="container">
         <div class="row">
-            <div class="offset-2 col-8">
+            <div class="offset-0 offset-md-2 col-12 col-md-8">
                 <h2 class="gallery__heading text-center to-top"><?= $title ?></h2>
                 <div class="gallery__js owl-carousel owl-theme to-top">
                     <?php foreach ($gallery_list as $l): ?>
