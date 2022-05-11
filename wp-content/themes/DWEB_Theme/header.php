@@ -64,7 +64,7 @@ endif; ?>
                             <img src="<?= $logoHeader; ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     </div>
-                    <div class="head__nav d-none d-md-block">
+                    <div class="head__nav d-none d-md-flex">
                         <?php if (has_nav_menu('header-primary')) {
                             wp_nav_menu(
                                 array(

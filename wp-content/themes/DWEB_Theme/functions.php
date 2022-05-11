@@ -27,8 +27,8 @@ require_once( __DIR__ . '/lib/payment/config.php');
 //require_once( __DIR__ . '/template-variable.php.php');
 //echo $nameFull;die;
 
-//update_option('siteurl','http://dweb.vn/calista');
-//update_option('home','http://dweb.vn/calista');
+//update_option('siteurl','https://kientrucnoithatcaocap.vn');
+//update_option('home','https://kientrucnoithatcaocap.vn');
 
 if (!isset($content_width))
 {
