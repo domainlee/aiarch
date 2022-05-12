@@ -716,20 +716,26 @@
             }
         }
         .single__info--row {
-            margin: 0 0 15px;
+            margin: 0 0 10px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             > div {
+                margin: 0 0 10px;
                 display: flex;
-                flex: 1;
+                flex-wrap: wrap;
+                flex: auto;
+                width: 100%;
                 > div:nth-child(1) {
-                    font-size: 20px;
+                    font-size: 22px;
                     font-family: "Playfair Display",serif;
-                    width: 120px;
-                    flex: 0 0 120px;
+                    width: 100%;
+                    flex: auto;
                 }
                 > div:nth-child(2) {
-                    padding: 5px 15px;
+                    margin: 10px 0 0;
+                    padding: 0;
+                    width: 100%;
                 }
             }
         }
