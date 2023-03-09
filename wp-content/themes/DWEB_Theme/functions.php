@@ -317,12 +317,12 @@ function my_breadcrumb2($id = null) {
 
 
 function wpa_cpt_tags( $query ) {
-    if ( $query->is_tag() && $query->is_main_query() ) {
-        $query->set( 'post_type', array( 'post', 'du-an', 'bai-viet' ) );
-    }
-    if ( $query->is_search() && $query->is_main_query() ) {
-        $query->set( 'post_type', array( 'post' ) );
-    }
+//    if ( $query->is_tag() && $query->is_main_query() ) {
+//        $query->set( 'post_type', array( 'post', 'du-an', 'bai-viet' ) );
+//    }
+//    if ( $query->is_search() && $query->is_main_query() ) {
+//        $query->set( 'post_type', array( 'post' ) );
+//    }
 }
 add_action( 'pre_get_posts', 'wpa_cpt_tags' );
 
@@ -1895,4 +1895,11 @@ function get_number($string) {
 //
 //add_filter( 'user_trailingslashit', 'fix_slash', 55, 2 );
 
+add_action('pre_get_posts', 'wpse161279_ignore_sticky_posts');
+function wpse161279_ignore_sticky_posts($query) {
+    if (!is_admin() && $query->is_main_query()) {
+        $sticky = get_option( 'sticky_posts' );
+        $query->set( 'post__not_in', $sticky );
+    }
+}
 ?>
