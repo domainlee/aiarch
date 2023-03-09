@@ -16,6 +16,11 @@
             $('body').toggleClass('nav-open-js');
         });
 
+        var full_screen = $('.full-screen');
+        full_screen.click(function (e) {
+            $('body').toggleClass('gallery-single_active');
+        });
+
         var toggle_search = $('.toggle-search');
         toggle_search.click(function (e) {
             $('body').toggleClass('search-open-js');

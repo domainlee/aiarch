@@ -1526,3 +1526,29 @@ a:hover {
 .news__item.sticky .news__image {
     background-color: #f8d8a22e;
 }
+.gallery-single {
+    position: relative;
+    transition: all 5s ease;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .gallery-single_active & {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2000;
+    }
+    .full-screen {
+        &:before {
+            content: "\f065";
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+    }
+}
+
+.owl-carousel .owl-item img {
+    -webkit-backface-visibility: hidden;
+}

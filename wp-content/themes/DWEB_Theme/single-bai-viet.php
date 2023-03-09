@@ -5,20 +5,6 @@
 <div class="single">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="single__author">
-                    <div>
-                        <?php
-                        $post = get_post();
-                        echo get_avatar( $post->post_author );
-                        $info = get_user_meta($post->post_author);
-                        $nickname = $info['last_name'][0] || $info['first_name'][0] ? $info['last_name'][0].' '.$info['first_name'][0]:$info['nickname'][0];
-                        ?>
-                    </div>
-                    <div>Đăng bởi <?= $nickname ?></div>
-                    <div>vào lúc <?php the_time('d/m/Y'); ?></div>
-                </div>
-            </div>
             <div class="col-md-9">
                 <div class="hom-page__inner">
                     <div class="home-page__main">

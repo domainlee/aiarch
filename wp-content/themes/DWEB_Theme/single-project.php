@@ -5,21 +5,7 @@
 <div class="single">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="single__author">
-                    <div>
-                        <?php
-                            $post = get_post();
-                            echo get_avatar( $post->post_author );
-                            $info = get_user_meta($post->post_author);
-                            $nickname = $info['last_name'][0] || $info['first_name'][0] ? $info['last_name'][0].' '.$info['first_name'][0]:$info['nickname'][0];
-                        ?>
-                    </div>
-                    <div>Đăng bởi <?= $nickname ?></div>
-                    <div>vào lúc <?php the_time('d/m/Y'); ?></div>
-                </div>
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="hom-page__inner">
                     <div class="home-page__main">
                         <div class="single-post">
@@ -44,20 +30,6 @@
                                         <div>
                                             <div>Địa chỉ</div>
                                             <div><?= $post_address ? $post_address:'---' ?></div>
-                                        </div>
-                                    </div>
-                                    <div class="single__info--row">
-                                        <div>
-                                            <div>Công trình</div>
-                                            <div>
-                                                <?php
-                                                    $term = get_the_terms(get_the_ID(), 'category');
-                                                    foreach ($term as $t) {
-                                                        $term_link = get_term_link($t->term_id);
-                                                        echo '<a class="me-2" href="'.$term_link.'" target="_blank">'.$t->name.'</a>';
-                                                    }
-                                                ?>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="single__info--row">
@@ -109,12 +81,15 @@
                     $post_intro_project = get_field('post_intro_project');
                     $footer_social = get_field('footer_social', 'options');
                 ?>
-                <div class="single__gallery owl-carousel owl-theme">
-                    <?php foreach ($post_images as $p): ?>
-                    <div class="single__gallery--item">
-                        <figure class="ratio ratio-16x9 m-0 owl-lazy" data-src="<?= $p['url'] ?>"></figure>
+                <div class="gallery-single">
+                    <a class="full-screen"></a>
+                    <div class="single__gallery owl-carousel owl-theme">
+                        <?php foreach ($post_images as $p): ?>
+                        <div class="single__gallery--item">
+                            <figure class="ratio ratio-16x9 m-0 owl-lazy" data-src="<?= $p['url'] ?>"></figure>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <?php endforeach; ?>
                 </div>
                 <div class="single__rating text-center">
                     <div class="client__rate"><i></i><i></i><i></i><i></i><i></i></div>
