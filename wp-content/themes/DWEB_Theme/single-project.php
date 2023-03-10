@@ -85,9 +85,30 @@
                     <a class="full-screen"></a>
                     <div class="single__gallery owl-carousel owl-theme">
                         <?php foreach ($post_images as $p): ?>
-                        <div class="single__gallery--item">
-                            <figure class="ratio ratio-16x9 m-0 owl-lazy" data-src="<?= $p['url'] ?>"></figure>
-                        </div>
+                        <?php if(!empty($p['post_images_youtube'])): ?>
+                            <div class="single__gallery--item">
+                                <a class="owl-video ratio ratio-16x9" style="background-image: url('<?= $p['post_images_img']['url'] ?>')" href="<?= $p['post_images_youtube'] ?>>"></a>
+                            </div>
+                        <?php else: ?>
+                            <div class="single__gallery--item">
+                                <figure class="ratio ratio-16x9 m-0 owl-lazy" data-src="<?= $p['post_images_img']['url'] ?>"></figure>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="single__gallery__thumb owl-carousel owl-theme">
+                        <?php foreach ($post_images as $p): ?>
+                            <?php if(!empty($p['post_images_youtube'])): ?>
+                                <div class="">
+                                    <figure style="width: 100px;height: 100px;background-image: url('<?= $p['post_images_img']['url'] ?>')" ></figure>
+                                </div>
+                            <?php else: ?>
+                                <div class="">
+                                    <figure style="width: 100px;height: 100px;background-image: url('<?= $p['post_images_img']['url'] ?>')" ></figure>
+                                </div>
+                            <?php endif; ?>
+
                         <?php endforeach; ?>
                     </div>
                 </div>

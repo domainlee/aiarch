@@ -908,6 +908,23 @@ a:hover {
             margin: 0 0 15px;
             padding: 0 15px;
             width: 33.333333%;
+            position: relative;
+            &.sticky {
+                &:before {
+                    content: '';
+                    width: 20px;
+                    height: 26px;
+                    display: inline-block;
+                    background-image: url("../images/favicon.png");
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: 4px;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
             .news__image {
                 padding: 35px;
                 border: 1px solid #e4c591;
@@ -1100,7 +1117,8 @@ a:hover {
             figure {
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: cover;
+                background-size: contain;
+                background-color: #DEDEDE;
             }
         }
         &.owl-carousel {
@@ -1551,4 +1569,11 @@ a:hover {
 
 .owl-carousel .owl-item img {
     -webkit-backface-visibility: hidden;
+}
+.owl-video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
