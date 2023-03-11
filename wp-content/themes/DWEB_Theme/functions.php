@@ -1897,7 +1897,7 @@ function get_number($string) {
 
 add_action('pre_get_posts', 'wpse161279_ignore_sticky_posts');
 function wpse161279_ignore_sticky_posts($query) {
-    if (!is_admin() && $query->is_main_query()) {
+    if (!is_admin() && $query->is_main_query() && !$query->is_single) {
         $sticky = get_option( 'sticky_posts' );
         $query->set( 'post__not_in', $sticky );
     }
