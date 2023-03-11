@@ -116,6 +116,7 @@
             </div>
             <div class="col-12">
                 <div class="single__social">
+                    <?php if(!empty($footer_social)): ?>
                     <div class="footer__social">
                         <?php foreach ($footer_social as $i): ?>
                             <a href="<?= $i['footer_social_url'] ?>">
@@ -123,6 +124,7 @@
                             </a>
                         <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
