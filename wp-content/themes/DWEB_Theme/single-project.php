@@ -74,44 +74,40 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-12">
-                <?php
-                    $post_images = get_field('post_images');
+            <?php
+                $post_images = get_field('post_images');
+                if(!empty($post_images)):
+            ?>
+                <section class="slide">
+                <a class="full-screen"></a>
+                <div class="slider-container">
+                    <?php
                     $post_title_project = get_field('post_title_project');
                     $post_intro_project = get_field('post_intro_project');
                     $footer_social = get_field('footer_social', 'options');
-                ?>
-                <div class="gallery-single">
-                    <a class="full-screen"></a>
-                    <div class="single__gallery owl-carousel owl-theme">
-                        <?php foreach ($post_images as $p): ?>
-                        <?php if(!empty($p['post_images_youtube'])): ?>
-                            <div class="single__gallery--item">
-                                <a class="owl-video ratio ratio-16x9" style="background-image: url('<?= $p['post_images_img']['url'] ?>')" href="<?= $p['post_images_youtube'] ?>>"></a>
-                            </div>
-                        <?php else: ?>
-                            <div class="single__gallery--item">
-                                <figure class="ratio ratio-16x9 m-0 owl-lazy" data-src="<?= $p['post_images_img']['url'] ?>"></figure>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php endforeach; ?>
-                    </div>
-                    <div class="single__gallery__thumb owl-carousel owl-theme">
-                        <?php foreach ($post_images as $p): ?>
+                    ?>
+                    <ul class="slider-wrapper" id="slider">
+                        <?php $c = 0; foreach ($post_images as $p): $c++; ?>
                             <?php if(!empty($p['post_images_youtube'])): ?>
-                                <div class="">
-                                    <figure style="width: 100px;height: 100px;background-image: url('<?= $p['post_images_img']['url'] ?>')" ></figure>
-                                </div>
+                                <li class="<?= $c == 1 ? 'slide-current':'' ?> video" data-type="youtube" data-video="<?= $p['post_images_youtube'] ?>" ></li>
                             <?php else: ?>
-                                <div class="">
-                                    <figure style="width: 100px;height: 100px;background-image: url('<?= $p['post_images_img']['url'] ?>')" ></figure>
-                                </div>
+                                <li class="<?= $c == 1 ? 'slide-current':'' ?>">
+                                    <figure class="ratio ratio-16x9" style="background-image: url('<?= $p['post_images_img']['url'] ?>')"></figure>
+                                </li>
                             <?php endif; ?>
 
                         <?php endforeach; ?>
-                    </div>
+                    </ul>
+                    <div class="drt-control control-left" id="lft-control"><i class='fa fa-angle-left'></i></div>
+                    <div class="drt-control control-right" id="rht-control"><i class='fa fa-angle-right'></i></div>
+                    <div class="tempo-bar" id="barra"></div>
+                    <ul class="slider-controls" id="slider-controls"></ul>
                 </div>
+            </section>
+            <?php endif; ?>
+            <div class="col-12">
+
+
                 <div class="single__rating text-center">
                     <div class="client__rate"><i></i><i></i><i></i><i></i><i></i></div>
                     <h3><?= $post_title_project ? $post_title_project:'---' ?></h3>

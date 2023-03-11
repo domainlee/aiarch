@@ -18,6 +18,8 @@ $term_images = get_field('category_image', $object);
                 <div class="news__inner">
                         <div class="news__list">
                             <?php
+                            $stick = get_option( 'sticky_posts' );
+                            if(!empty($stick)):
                             $args = array(
                                 'post__in'  => get_option( 'sticky_posts' ),
                                 'tax_query' => array(
@@ -66,6 +68,7 @@ $term_images = get_field('category_image', $object);
                                 </div>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata();?>
+                            <?php endif; ?>
                             <?php
                             if (have_posts()): while (have_posts()) : the_post();
                                 $title = get_the_title();

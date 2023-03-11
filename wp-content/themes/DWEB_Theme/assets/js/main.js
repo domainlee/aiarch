@@ -11,6 +11,9 @@
     }
 
     var nav = function () {
+
+        $("#slider").QCslider({duration: 7000});
+
         var button_nav = $('.toggle-menu');
         button_nav.click(function (e) {
             $('body').toggleClass('nav-open-js');

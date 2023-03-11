@@ -16,6 +16,7 @@ const config = {
         JS_DIR + '/masonry.pkgd.min.js',
         JS_DIR + '/theia-sticky-sidebar.min.js',
         JS_DIR + '/resize-sensor.min.js',
+        JS_DIR + '/qcslider.jquery.js',
         JS_DIR + '/jquery.lazy.min.js',
         JS_DIR + '/main.js',
         CSS_DIR + '/main.scss',

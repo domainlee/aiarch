@@ -1544,9 +1544,11 @@ a:hover {
 .news__item.sticky .news__image {
     background-color: #f8d8a22e;
 }
-.gallery-single {
+.gallery-single_active {
+    overflow: hidden;
+}
+.slide {
     position: relative;
-    transition: all 5s ease;
     top: 0;
     bottom: 0;
     left: 0;
@@ -1558,8 +1560,22 @@ a:hover {
         right: 0;
         bottom: 0;
         z-index: 2000;
+        display: flex;
+        align-items: center;
+        background-color: #000;
     }
     .full-screen {
+        position: absolute;
+        z-index: 1000;
+        background-color: #FFF;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 80px;
+        right: 50px;
         &:before {
             content: "\f065";
             font: normal normal normal 14px/1 FontAwesome;
