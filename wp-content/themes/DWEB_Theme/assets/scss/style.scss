@@ -166,6 +166,7 @@ a:hover {
         width: 100%;
         z-index: 10;
         background-color: #FFF;
+        top: 0;
     }
     .head__square--left {
         left: 2%;
@@ -1180,21 +1181,22 @@ a:hover {
 }
 
 .footer {
-    background: #BCBCBC;
+    --bd-color: #2e3850;
+    background: #17263b;
     color: #FFF;
     overflow: hidden;
     .footer__inner {
         display: flex;
         .footer__col {
             padding: 50px;
-            border-right: 1px solid #FFF;
+            border-right: 1px solid var(--bd-color);
         }
         .footer__col:nth-child(1) {
             padding: 0;
             width: 20%;
             .footer__logo {
                 padding: 50px 30px;
-                border-left: 1px solid #FFF;
+                border-left: 1px solid var(--bd-color);
                 position: relative;
                 img {
                     filter: brightness(0) invert(1);
@@ -1204,7 +1206,7 @@ a:hover {
                     width: 10000px;
                     height: 1px;
                     display: block;
-                    background-color: #FFF;
+                    background-color: var(--bd-color);
                     position: absolute;
                     bottom: 0;
                     right: 0;
@@ -1216,7 +1218,7 @@ a:hover {
             padding: 0;
             > div {
                 padding: 50px;
-                border-bottom: 1px solid #FFF;
+                border-bottom: 1px solid var(--bd-color);
                 p {
                     &:last-child {
                         margin: 0;
@@ -1240,7 +1242,7 @@ a:hover {
                         input {
                             padding: 7px 10px;
                             width: 100%;
-                            border: 1px solid #FFF;
+                            border: 1px solid var(--bd-color);
                             background-color: transparent;
                             color: #FFF;
                             font-size: 14px;
@@ -1270,7 +1272,7 @@ a:hover {
     }
     .footer__copywriter {
         padding: 10px 0;
-        border-top: 1px solid #FFF;
+        border-top: 1px solid var(--bd-color);
         text-align: center;
         font-size: 14px;
     }
@@ -1284,7 +1286,7 @@ a:hover {
         height: 30px;
         color: #FFF;
         border-radius: 50%;
-        border: 1px solid #FFF;
+        border: 1px solid var(--bd-color);
         display: inline-flex;
         align-items: center;
         justify-content: center;

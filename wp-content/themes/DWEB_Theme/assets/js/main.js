@@ -339,11 +339,11 @@
                 if(scrollTop > 100) {
                     var top = -100 + (scrollTop - 100);
                     if(top <= 0) {
-                        head.css('top', top);
+                        // head.css('top', top);
                     }
                     $('.head').addClass('head__fix');
                 } else if(scrollTop < 100) {
-                    head.css('top', 0);
+                    // head.css('top', 0);
                     $('.head').removeClass('head__fix');
                 }
             }, 10);
