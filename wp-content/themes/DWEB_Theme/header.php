@@ -8,8 +8,8 @@ $logo = get_field('logo', 'options');
 $head_tool = get_field('head_tool2', 'options');
 $favicon = get_field('head_favicon', 'options');
 $logoHeader = '';
-if (!empty($logo['url'])) {
-    $logoHeader = $logo['url'];
+if (!empty($logo['sizes']['medium'])) {
+    $logoHeader = $logo['sizes']['medium'];
 } else {
     $logoHeader = get_template_directory_uri() . '/img/shoes/logo.png';
 }

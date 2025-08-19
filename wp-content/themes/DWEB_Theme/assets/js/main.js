@@ -154,6 +154,14 @@
             navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         });
 
+        $(".owl-carousel").on("initialize.owl.carousel", function(e) {
+            var buttonPrev = $('.hero__js').find('.owl-nav .owl-prev');
+            var buttonNext = $('.hero__js').find('.owl-nav .owl-next');
+            buttonPrev.attr('aria-label', 'Prev Hero');
+            buttonNext.attr('aria-label', 'Next Hero');
+        });
+
+
         // $('.gallery__js').owlCarousel({
         //     loop: true,
         //     margin: 30,

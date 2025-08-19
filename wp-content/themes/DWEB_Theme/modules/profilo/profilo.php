@@ -17,6 +17,7 @@
                     <div class="profilo__list to-top">
                         <?php
                             $cc = 0;
+                            if(!empty($profilo_list)):
                             foreach ($profilo_list as $post):
                             $cc++;
                             if($cc < 2){
@@ -69,11 +70,12 @@
                                     </div>
                                 </div>
                             </div>
-                        <?php  } endforeach; ?>
+                        <?php  } endforeach; endif; ?>
 
                         <div class="profilo__col">
                         <?php
                         $ccc = 0;
+                        if(!empty($profilo_list)):
                         foreach ($profilo_list as $post):
                             $ccc++;
                             if($ccc == 2 || $ccc == 3){
@@ -124,7 +126,7 @@
                                             <div class="square position-absolute right-bottom"><div></div></div>
                                         </div>
                                     </div>
-                            <?php  }  endforeach; ?>
+                            <?php  }  endforeach; endif; ?>
                         </div>
                     </div>
                 </div>

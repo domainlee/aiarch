@@ -33,7 +33,7 @@
                         <h3 class="footer__headline">Liên kết</h3>
                         <div class="footer__social">
                             <?php foreach ($footer_social as $i): ?>
-                                <a href="<?= $i['footer_social_url'] ?>">
+                                <a href="<?= $i['footer_social_url'] ?>" aria-label="<?= 'icon-' . $i['footer_social_image'] ?>">
                                     <i class="<?= $i['footer_social_image'] ?>"></i>
                                 </a>
                             <?php endforeach; ?>

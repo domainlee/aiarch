@@ -23,13 +23,13 @@
                             <div class="service__image--inner">
                                 <div class="square position-absolute left-top"><div></div></div>
                                 <div class="square position-absolute right-top"><div></div></div>
-                                <a class="service__button" href="<?= $i['service_url'] ?>"><figure class="ratio ratio-2x3 lazy" data-src="<?= $i['service_image']['url'] ?>"></figure></a>
+                                <a class="service__button" href="<?= $i['service_url'] ?>" aria-label="<?= $i['service_title'] ?>"><figure class="ratio ratio-2x3 lazy" data-src="<?= $i['service_image']['sizes']['medium_large'] ?>"></figure></a>
                                 <div class="square position-absolute left-bottom"><div></div></div>
                                 <div class="square position-absolute right-bottom"><div></div></div>
                             </div>
                         </div>
                         <div class="service__col service__content to-top">
-                            <h2 class="service__title"><a href="<?= $i['service_url'] ?>" target="_blank"><?= $i['service_title'] ?></a></h2>
+                            <h2 class="service__title"><a href="<?= $i['service_url'] ?>" target="_blank" aria-label="<?= $i['service_title'] ?>"><?= $i['service_title'] ?></a></h2>
                             <div class="service__intro">
                                 <?= $i['service_intro'] ?>
                             </div>

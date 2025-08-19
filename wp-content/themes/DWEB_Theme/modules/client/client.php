@@ -21,7 +21,7 @@
                                 <div class="client__image">
                                     <div class="square position-absolute left-top"><div></div></div>
                                     <div class="square position-absolute right-top"><div></div></div>
-                                    <figure class="ratio ratio-1x1 owl-lazy" data-src="<?= $l['client_image']['url'] ?>"></figure>
+                                    <figure class="ratio ratio-1x1 owl-lazy" data-src="<?= $l['client_image']['sizes']['medium'] ?>"></figure>
                                     <div class="square position-absolute left-bottom"><div></div></div>
                                     <div class="square position-absolute right-bottom"><div></div></div>
                                 </div>

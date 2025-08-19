@@ -26,7 +26,7 @@
                             $term_link = get_term_link($term[0]->term_id);
                         ?>
                         <div class="news__item">
-                            <a href="<?= $link ?>">
+                            <a href="<?= $link ?>" aria-label="<?= $title ?>">
                                 <div class="news__image">
                                     <div class="news__image--inner">
                                         <div class="square position-absolute left-top"><div></div></div>
@@ -48,7 +48,7 @@
                         <?php endforeach; ?>
                     </div>
                     <div class="button__default to-top">
-                        <a href="<?= $button_url ? $button_url:'#' ?>" target="_blank"><?= $button_text ? $button_text:'Xem Thêm' ?></a>
+                        <a aria-label="<?= $title ?>" href="<?= $button_url ? $button_url:'#' ?>" target="_blank"><?= $button_text ? $button_text:'Xem Thêm' ?></a>
                     </div>
                 </div>
             </div>
