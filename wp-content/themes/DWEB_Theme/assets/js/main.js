@@ -162,17 +162,17 @@
         });
 
 
-        // $('.gallery__js').owlCarousel({
-        //     loop: true,
-        //     margin: 30,
-        //     dots: false,
-        //     nav: false,
-        //     lazyLoad: true,
-        //     autoplay: true,
-        //     items: 1,
-        //     autoplayHoverPause: true,
-        //     navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-        // });
+        $('.gallery__js').owlCarousel({
+            loop: true,
+            margin: 30,
+            dots: false,
+            nav: false,
+            lazyLoad: true,
+            autoplay: true,
+            items: 1,
+            autoplayHoverPause: true,
+            navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        });
 
         $('.client__js').owlCarousel({
             loop: true,
@@ -323,16 +323,17 @@
         "use strict";
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
         var preloader = $("#preloader");
-        if (!isMobile) {
-            setTimeout(function () {
-                preloader.addClass("preloaded");
-            }, 800);
-            setTimeout(function () {
-                preloader.remove();
-            }, 2000);
-        } else {
-            preloader.remove();
-        }
+        // if (!isMobile) {
+        //     setTimeout(function () {
+        //         preloader.addClass("preloaded");
+        //     }, 800);
+        //     setTimeout(function () {
+        //         preloader.remove();
+        //     }, 2000);
+        // } else {
+        // }
+        // preloader.remove();
+
     }
 
     var scroll = function () {

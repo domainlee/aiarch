@@ -3,6 +3,8 @@
     $gallery_list;
     $button_text;
     $button_url;
+//    print_r($title);die;
+//    print_r($gallery_list);die;
 ?>
 
 <section class="gallery">

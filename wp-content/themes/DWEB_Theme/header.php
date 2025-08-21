@@ -101,7 +101,7 @@ endif; ?>
     <div class="square position-absolute head__square--right"><div></div></div>
 </header>
 
-<div id="preloader">
+<div id="preloader" class="d-none">
     <div class="loader_line"></div>
 </div>
 
